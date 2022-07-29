@@ -9,6 +9,8 @@ describe("🚀 Visit Page and Login",() =>{
         cy
         .get("input[id='user-name']")
         .type("standard_user")
+        .get("input[id='password']")
+        .type("secret_sauce")
     })
 
     
