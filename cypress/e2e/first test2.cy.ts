@@ -11,6 +11,8 @@ describe("🚀 Visit Page and Login",() =>{
         .type("standard_user")
         .get("input[id='password']")
         .type("secret_sauce")
+        .get("input[id='login-button']")
+        .click()
     })
 
     
