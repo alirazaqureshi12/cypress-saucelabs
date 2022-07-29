@@ -18,5 +18,12 @@ describe("🚀 Visit Page and Login",() =>{
         .click()
     })
 
+    it("Landing Page", () => {
+        cy
+        .get("div[id='inventory_container']")
+        .contains("Sauce Labs Backpack")
+        
+    })
+
     
 })
