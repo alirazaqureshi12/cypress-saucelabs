@@ -1,3 +1,6 @@
+let username = "standard_user"
+let password = "secret_sauce"
+
 describe("🚀 Visit Page and Login",() =>{
     
     
@@ -8,9 +11,9 @@ describe("🚀 Visit Page and Login",() =>{
     it("Login",() => {
         cy
         .get("input[id='user-name']")
-        .type("standard_user")
+        .type(username)
         .get("input[id='password']")
-        .type("secret_sauce")
+        .type(password)
         .get("input[id='login-button']")
         .click()
     })
