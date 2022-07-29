@@ -25,5 +25,11 @@ describe("🚀 Visit Page and Login",() =>{
         
     })
 
+    it("Go To Item", () => {
+        cy
+        .contains("Sauce Labs Bike Light")
+        .click()
+    })
+
     
 })
