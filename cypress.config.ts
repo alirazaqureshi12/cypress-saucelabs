@@ -9,6 +9,6 @@ export default defineConfig({
   experimentalSessionAndOrigin: false,
   chromeWebSecurity: false,
   viewportWidth: 1000,
-  viewportHeight: 760
+  viewportHeight: 760, 
   },
 });
