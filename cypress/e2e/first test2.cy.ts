@@ -22,7 +22,8 @@ describe("🚀 Visit Page and Login",() =>{
         cy
         .get("div[id='inventory_container']")
         .contains("Sauce Labs Backpack")
-        
+        .get("data-test=add-to-cart-sauce-labs-backpack")
+        .click()
     })
 
     
