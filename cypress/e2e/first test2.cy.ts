@@ -29,6 +29,7 @@ describe("🚀 Visit Page and Login",() =>{
         cy
         .contains("Sauce Labs Bike Light")
         .click()
+        .get("buttom[id='add-to-cart-sauce-labs-bike-light']")
     })
 
     
