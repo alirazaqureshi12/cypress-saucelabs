@@ -28,7 +28,13 @@ describe("🚀 Visit Page and Login",() =>{
         .click()
         .wait(3000)
 
+
+
     })
+
+})
+
+describe("Product Page item",()=>{
 
     it("Go To Item", () => {
         
