@@ -1,3 +1,5 @@
+import { should } from "chai"
+
 let username = "standard_user"
 let password = "secret_sauce"
 
@@ -22,8 +24,18 @@ describe("🚀 Visit Page and Login",() =>{
         cy
         .get("div[id='inventory_container']")
         .contains("Sauce Labs Backpack")
-        .get("data-test=add-to-cart-sauce-labs-backpack")
+        .get("button[id='add-to-cart-sauce-labs-backpack']")
         .click()
+        .wait(3000)
+
+    })
+
+    it("Go To Item", () => {
+        
+        cy.scrollTo('top')
+        .get("div[id='inventory_container']")
+        .contains("Sauce Labs Bike Light")
+        .get("button[id='add-to-cart-sauce-labs-bike-light']")
     })
 
     
