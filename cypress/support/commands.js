@@ -26,13 +26,22 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
+
+let email = "standard_user"
+let password = "secret_sauce"
+
+
+
+
+Cypress.Commands.add('validLogin', (email="standard_user", password="secret_sauce") => { 
+    
+    cy
+        .get("input[id='user-name']")
+        .type(email)
+        .get("input[id='password']")
+        .type(password)
+        .get("input[id='login-button']")
+        .click()
+
+
+ })

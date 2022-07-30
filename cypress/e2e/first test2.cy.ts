@@ -1,16 +1,29 @@
 import { should } from "chai"
+import './commands.js'
 
 let username = "standard_user"
 let password = "secret_sauce"
 
+//beforeEach(() => {
+
+    //for (let i = 0; i < 10; i++) {
+        //console.log ("Before Each" + i);
+      //}
+    //cy.validLogin()
+    
+ //})
+
+
+
+
 describe("🚀 Visit Page and Login",() =>{
     
     
-    it("Visit Page",()=>{
+    it.only("Visit Page",()=>{
         cy.visit("https://www.saucedemo.com/")
     })
 
-    it("Login [L_001 - Automated]",() => {
+    it.only("Login [L_001 - Automated]",() => {
         cy
         .get("input[id='user-name']")
         .type(username)
@@ -20,7 +33,7 @@ describe("🚀 Visit Page and Login",() =>{
         .click()
     })
 
-    it("Landing Page", () => {
+    it.only("Landing Page", () => {
         cy
         .get("div[id='inventory_container']")
         .contains("Sauce Labs Backpack")
@@ -36,7 +49,7 @@ describe("🚀 Visit Page and Login",() =>{
 
 describe("Product Page item",()=>{
 
-    it("Go To Item", () => {
+    it.only("Go To Item", () => {
         
         cy.scrollTo('top')
         .get("div[id='inventory_container']")
@@ -44,11 +57,21 @@ describe("Product Page item",()=>{
         .get("button[id='add-to-cart-sauce-labs-bike-light']")
     })
 
-    it("Select Another Item", () => {
+    it.only("Select Another Item", () => {
         cy
-        .get("button[name='add-to-cart-sauce-labs-bolt-t-shirt']")
-        .click()
-    })  
+
+        .get("div[id='inventory_container']")
+        .contains("Sauce Labs Fleece Jacket")
+
+       .click()
+        
+    }) 
+    it("select Jacket",()=> {
+    cy
+    .get("div[id='add-to-cart-sauce-labs-bolt-t-shirt']")
+    .click()
+
+    })
 
     it("Click Sorting Field", () => {
         cy

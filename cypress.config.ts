@@ -5,7 +5,7 @@ export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       
-      require('cypress-mochawesome-reporter/plugin')(on);
+      //require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
     },
   experimentalSourceRewriting: false,
