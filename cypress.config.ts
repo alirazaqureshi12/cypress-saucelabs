@@ -9,7 +9,7 @@ export default defineConfig({
 
       
       
-      require('cypress-mochawesome-reporter/plugin')(on);
+     // require('cypress-mochawesome-reporter/plugin')(on);
 
       
       // implement node event listeners here
