@@ -47,8 +47,9 @@ describe("🚀 Visit Page and Login",() =>{
     it("Click Sorting Field", () => {
         cy
         .get("select[data-test='product_sort_container']")
-        .select('Price (low to high)')
+        .select('Price (high to low)')
     })
+
 
     
 })
