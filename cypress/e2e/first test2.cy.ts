@@ -1,6 +1,6 @@
 import { should } from "chai"
 import './commands.js'
-
+//const {each}= require ("cypress/types/bluebird");
 let username = "standard_user"
 let password = "secret_sauce"
 
