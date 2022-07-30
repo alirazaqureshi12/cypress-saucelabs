@@ -15,8 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands.ts'
-//import 'cypress-mochawesome-reporter/register';
-//import "cypress-localstorage-commands";
+import 'cypress-mochawesome-reporter/register';
+import "cypress-localstorage-commands";
 
 
 // Alternatively you can use CommonJS syntax:

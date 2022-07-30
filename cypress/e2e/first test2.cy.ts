@@ -1,5 +1,6 @@
 import { should } from "chai"
-import './commands.js'
+import cypressConfig from "../../cypress.config"
+//import './commands.js'
 //const {each}= require ("cypress/types/bluebird");
 let username = "standard_user"
 let password = "secret_sauce"
@@ -19,11 +20,11 @@ let password = "secret_sauce"
 describe("🚀 Visit Page and Login",() =>{
     
     
-    it.only("Visit Page",()=>{
+    it("Visit Page",()=>{
         cy.visit("https://www.saucedemo.com/")
     })
 
-    it.only("Login [L_001 - Automated]",() => {
+    it("Login [L_001 - Automated]",() => {
         cy
         .get("input[id='user-name']")
         .type(username)
@@ -32,22 +33,83 @@ describe("🚀 Visit Page and Login",() =>{
         .get("input[id='login-button']")
         .click()
     })
+})
 
-    it.only("Landing Page", () => {
+describe("Products ",() => {
+    it("Landing Page", () => {
         cy
         .get("div[id='inventory_container']")
         .contains("Sauce Labs Backpack")
         .get("button[id='add-to-cart-sauce-labs-backpack']")
         .click()
         .wait(3000)
+    })
+        
+    it("Go To Item", () => {
+        
+            cy.scrollTo('top')
+            .get("div[id='inventory_container']")
+            .contains("Sauce Labs Bike Light")
+            .get("button[id='add-to-cart-sauce-labs-bike-light']")
+            .click()
+            .wait(3000)
+        })
+    it("continue shopping",() => {
+        cy.scrollTo('top')
+        .get("div[id='inventory_container']")
+        .contains("Sauce Labs Bolt T-Shirt")
+        .get("button[id='add-to-cart-sauce-labs-bolt-t-shirt']")
+        .click()
+        .wait(3000)
+
+    })
+    
+    it("Other item to buy",() => {
+        cy
+        .get("div[id='inventory_container']")
+        .contains("Sauce Labs Fleece Jacket")
+        .get("button[id='add-to-cart-sauce-labs-fleece-jacket']")
+        .click()
+        .wait(3000)
+    })
+
+    it("Junior stuff",()=> {
+        cy
+        .get("div[id='inventory_container']")
+        .contains("Sauce Labs Onesie")
+        .get("button[id='add-to-cart-sauce-labs-onesie']")
+        .click()
+        .wait(3000)
+    })
+
+    it("Final iten to buy",()=> {
+        cy
+        .get("div[id='inventory_container'")
+        .contains("T-Shirt")
+        .get("button[id='add-to-cart-test.allthethings()-t-shirt-(red)']")
+        .click()
+        .wait(3000)
+
+    })
+    /*it("Shopping cart ",()=> {
+        cy
+        .get("div[id='header_label']")
+        .contains("shopping_cart_container")
+        .get("div[id ='shopping_cart_container']")
+        .click()
+
+    })*/
+
 
 
 
     })
 
-})
 
-describe("Product Page item",()=>{
+
+
+
+/*describe("Product Page item",()=>{
 
     it.only("Go To Item", () => {
         
@@ -81,4 +143,4 @@ describe("Product Page item",()=>{
 
 
     
-})
+})*/
