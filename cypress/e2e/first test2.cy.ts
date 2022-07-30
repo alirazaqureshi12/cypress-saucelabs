@@ -38,5 +38,11 @@ describe("🚀 Visit Page and Login",() =>{
         .get("button[id='add-to-cart-sauce-labs-bike-light']")
     })
 
+    it("Select Another Item", () => {
+        cy
+        .get("button[name='add-to-cart-sauce-labs-bolt-t-shirt']")
+        .click()
+    })  
+
     
 })
