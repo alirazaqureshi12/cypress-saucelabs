@@ -1,11 +1,17 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
-  reporter: 'cypress-mochawesome-reporter',
+
+  
   e2e: {
+    
     setupNodeEvents(on, config) {
+
       
-      //require('cypress-mochawesome-reporter/plugin')(on);
+      
+     // require('cypress-mochawesome-reporter/plugin')(on);
+
+      
       // implement node event listeners here
     },
   experimentalSourceRewriting: false,
@@ -16,10 +22,11 @@ export default defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
-    reportPageTitle: 'custom-title',
+    reportPageTitle: 'sauceReport',
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
+    
   }
   },
 });
