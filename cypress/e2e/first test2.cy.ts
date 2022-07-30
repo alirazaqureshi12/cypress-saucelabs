@@ -6,11 +6,11 @@ let password = "secret_sauce"
 describe("🚀 Visit Page and Login",() =>{
     
     
-    it("visit page",()=>{
+    it("Visit Page",()=>{
         cy.visit("https://www.saucedemo.com/")
     })
 
-    it("Login",() => {
+    it("Login [L_001]",() => {
         cy
         .get("input[id='user-name']")
         .type(username)
