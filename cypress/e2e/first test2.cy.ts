@@ -10,7 +10,7 @@ describe("🚀 Visit Page and Login",() =>{
         cy.visit("https://www.saucedemo.com/")
     })
 
-    it("Login [L_001]",() => {
+    it("Login [L_001 - Automated]",() => {
         cy
         .get("input[id='user-name']")
         .type(username)
