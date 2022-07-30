@@ -1,18 +1,20 @@
 import { should } from "chai"
 import cypressConfig from "../../cypress.config"
-//import './commands.js'
+//import './commands.ts'
+//import './index.ts'
+
 //const {each}= require ("cypress/types/bluebird");
 let username = "standard_user"
 let password = "secret_sauce"
 
-//beforeEach(() => {
+beforeEach(() => {
 
-    //for (let i = 0; i < 10; i++) {
-        //console.log ("Before Each" + i);
-      //}
-    //cy.validLogin()
+    for (let i = 0; i < 10; i++) {
+        console.log ("Before Each" + i);
+      }
     
- //})
+    
+ })
 
 
 
@@ -91,14 +93,16 @@ describe("Products ",() => {
         .wait(3000)
 
     })
-    /*it("Shopping cart ",()=> {
+    
+    it("Shopping cart ",()=> {
         cy
-        .get("div[id='header_label']")
-        .contains("shopping_cart_container")
-        .get("div[id ='shopping_cart_container']")
+        
+        //.get("shopping_cart_container")
+        .get("a[class='shopping_cart_link")
+        .scrollIntoView()
         .click()
 
-    })*/
+    })
 
 
 

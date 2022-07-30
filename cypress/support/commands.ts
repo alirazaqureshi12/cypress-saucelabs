@@ -12,7 +12,11 @@
 // //
 // // -- This is a parent command --
 
-
+import {
+    contains
+  } from "cypress/types/jquery"
+  import "cypress-localstorage-commands"
+  
 
 
 
