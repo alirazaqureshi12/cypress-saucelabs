@@ -158,12 +158,7 @@ describe("Products ",() => {
 
         })
 
-        /*it("reset app",()=>{
-        cy
-        .
-
-        })*/
-
+        
 
    
       
