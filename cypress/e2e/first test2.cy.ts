@@ -1,20 +1,23 @@
 import { should } from "chai"
+import { WatchDirectoryFlags } from "typescript"
 import cypressConfig from "../../cypress.config"
 //import './commands.ts'
-//import './index.ts'
+//import './index.js'
 
 //const {each}= require ("cypress/types/bluebird");
 let username = "standard_user"
 let password = "secret_sauce"
 
-beforeEach(() => {
 
-    for (let i = 0; i < 10; i++) {
-        console.log ("Before Each" + i);
-      }
-    
-    
- })
+/*before(() => {
+    cy.saveLocalStorage()
+})
+
+after(() => {
+
+    cy.login(username,password)
+    //cy.validLogin(email)
+ })*/
 
 
 
@@ -34,8 +37,10 @@ describe("🚀 Visit Page and Login",() =>{
         .type(password)
         .get("input[id='login-button']")
         .click()
+        .wait(3000)
     })
 })
+
 
 describe("Products ",() => {
     it("Landing Page", () => {
@@ -84,7 +89,7 @@ describe("Products ",() => {
         .wait(3000)
     })
 
-    it("Final iten to buy",()=> {
+    it("Final item to buy",()=> {
         cy
         .get("div[id='inventory_container'")
         .contains("T-Shirt")
@@ -92,22 +97,85 @@ describe("Products ",() => {
         .click()
         .wait(3000)
 
-    })
+       /* it("Shopping cart ",()=> {
+            cy
+            
+            //.get("shopping_cart_container")
+            .get("a[class='shopping_cart_link")
+            .scrollIntoView()
+            .click()
     
-    it("Shopping cart ",()=> {
-        cy
+        })*/
+       
+    })
+})
+     describe("Menu button",()=> {
+    it("All item",()=> {
+       cy
+       .scrollTo("top")
+       
+       .get("button[id='react-burger-menu-btn']")
+       .click()
+       .wait(3000)
+       
+    })
+      it("about",()=> {
+
+       cy
+       .get("a[id='about_sidebar_link']")
+       .click()
+       .visit("https://www.saucedemo.com/")
+      
+       
+ })
+    })
+
+    describe("Back to home page",()=> {
+
+       
+
+        it("login again",() => {
+            cy
+            .get("input[id='user-name']")
+            .type(username)
+            .get("input[id='password']")
+            .type(password)
+            .get("input[id='login-button']")
+            .click()
+            .wait(3000)
+        })
+
+        it("logout",()=> {
+         cy
+         .scrollTo("top")
+         .get("button[id='react-burger-menu-btn']")
+         .click()
+         .wait(3000)
+         
+         .get("a[id='reset_sidebar_link']")
+         .get("a[id='logout_sidebar_link']")
+         .click()
+
+        })
+
         
-        //.get("shopping_cart_container")
-        .get("a[class='shopping_cart_link")
-        .scrollIntoView()
-        .click()
 
+   
+      
     })
+   
+
+
+
+        
+    
+    
+   
 
 
 
 
-    })
+    
 
 
 
