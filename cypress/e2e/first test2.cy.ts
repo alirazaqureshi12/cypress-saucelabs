@@ -145,7 +145,7 @@ describe("Products ",() => {
             .wait(3000)
         })
 
-        /*it("logout",()=> {
+        it("logout",()=> {
          cy
          .scrollTo("top")
          .get("button[id='react-burger-menu-btn']")
@@ -156,7 +156,17 @@ describe("Products ",() => {
          .get("a[id='logout_sidebar_link']")
          .click()
 
-        })*/
+        })
+        it("Loginp",() => {
+            cy
+            .get("input[id='user-name']")
+            .type(username)
+            .get("input[id='password']")
+            .type(password)
+            .get("input[id='login-button']")
+            .click()
+            .wait(3000)
+        })
 
         
 
