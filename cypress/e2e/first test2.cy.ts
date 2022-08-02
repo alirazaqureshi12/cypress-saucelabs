@@ -135,7 +135,7 @@ describe("Products ",() => {
 
        
 
-        it("login again",() => {
+        it("loginag",() => {
             cy
             .get("input[id='user-name']")
             .type(username)
@@ -146,7 +146,7 @@ describe("Products ",() => {
             .wait(3000)
         })
 
-        it("logout",()=> {
+        it("logoutt",()=> {
          cy
          .scrollTo("top")
          .get("button[id='react-burger-menu-btn']")
