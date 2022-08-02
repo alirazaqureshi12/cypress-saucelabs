@@ -131,7 +131,7 @@ describe("Products ",() => {
     })
 
     describe("Back to home page",()=> {
-<<<<<<< HEAD
+
 
        
 
@@ -209,39 +209,17 @@ describe("Products ",() => {
             .wait(3000)
         })
         
-=======
+
 
        
 
-        it("login again",() => {
-            cy
-            .get("input[id='user-name']")
-            .type(username)
-            .get("input[id='password']")
-            .type(password)
-            .get("input[id='login-button']")
-            .click()
-            .wait(3000)
-        })
-
-        it("logout",()=> {
-         cy
-         .scrollTo("top")
-         .get("button[id='react-burger-menu-btn']")
-         .click()
-         .wait(3000)
-         
-         .get("a[id='reset_sidebar_link']")
-         .get("a[id='logout_sidebar_link']")
-         .click()
-
-        })
+       
 
         
 
    
       
->>>>>>> 9e31b361406de21e5a7a38e275407af94261c4bf
+
     })
    
 
