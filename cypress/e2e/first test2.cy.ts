@@ -145,7 +145,7 @@ describe("Products ",() => {
             .wait(3000)
         })
 
-        it("logout",()=> {
+        /*it("logout",()=> {
          cy
          .scrollTo("top")
          .get("button[id='react-burger-menu-btn']")
@@ -156,12 +156,46 @@ describe("Products ",() => {
          .get("a[id='logout_sidebar_link']")
          .click()
 
-        })
+        })*/
 
         
 
    
       
+    })
+
+    describe("Social Link",()=>{
+        it("Twitter",()=>{
+            
+            cy
+            .scrollTo('bottom')
+            .get("footer[class='footer']")
+            .get("ul[class='social']")
+            .contains("Twitter")
+            .get("li[class='social_twitter']")
+            .click()
+            .wait(3000)
+
+        })
+
+        it("",()=>{
+            cy
+            .get("footer[class='footer']")
+            .get("ul[class='social']")
+            .contains("Facebook")
+            .get("li[class='social_facebook']")
+            .click()
+            .wait(3000)
+        })
+        it("",()=>{
+            cy
+            .get("footer[class='footer']")
+            .get("ul[class='social']")
+            .contains("LinkedIn")
+            .get("li[class='social_linkedin']")
+            .click()
+            .wait(3000)
+        })
     })
    
 
