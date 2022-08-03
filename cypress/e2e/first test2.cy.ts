@@ -132,10 +132,9 @@ describe("Products ",() => {
 
     describe("Back to home page",()=> {
 
-
        
 
-        it("loginag",() => {
+        it("login again",() => {
             cy
             .get("input[id='user-name']")
             .type(username)
@@ -146,7 +145,7 @@ describe("Products ",() => {
             .wait(3000)
         })
 
-        it("logoutt",()=> {
+        it("logout",()=> {
          cy
          .scrollTo("top")
          .get("button[id='react-burger-menu-btn']")
@@ -158,68 +157,11 @@ describe("Products ",() => {
          .click()
 
         })
-        it("Loginp",() => {
-            cy
-            .get("input[id='user-name']")
-            .type(username)
-            .get("input[id='password']")
-            .type(password)
-            .get("input[id='login-button']")
-            .click()
-            .wait(3000)
-            .wait(3000)
-        })
 
         
 
    
       
-    })
-
-    describe("Social Link",()=>{
-        it("Twitter",()=>{
-            
-            cy
-            .scrollTo('bottom')
-            .get("footer[class='footer']")
-            .get("ul[class='social']")
-            .contains("Twitter")
-            .get("li[class='social_twitter']")
-            .click()
-            .wait(3000)
-
-        })
-
-        it("",()=>{
-            cy
-            .get("footer[class='footer']")
-            .get("ul[class='social']")
-            .contains("Facebook")
-            .get("li[class='social_facebook']")
-            .click()
-            .wait(3000)
-        })
-        it("",()=>{
-            cy
-            .get("footer[class='footer']")
-            .get("ul[class='social']")
-            .contains("LinkedIn")
-            .get("li[class='social_linkedin']")
-            .click()
-            .wait(3000)
-        })
-        
-
-
-       
-
-       
-
-        
-
-   
-      
-
     })
    
 
