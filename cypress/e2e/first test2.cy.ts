@@ -207,7 +207,7 @@ describe("Products ",() => {
             .get("li[class='social_linkedin']")
             .click()
             .wait(3000)
-            .wait(3000)
+            
         })
         
 
