@@ -167,7 +167,7 @@ describe("Products ",() => {
             .get("input[id='login-button']")
             .click()
             .wait(3000)
-            .wait(3000)
+            
         })
 
         
