@@ -1,44 +1,41 @@
 import { should } from "chai"
 import { WatchDirectoryFlags } from "typescript"
 import cypressConfig from "../../cypress.config"
+//import { swag} from "./Start.cy"
+//import {product} from "./products.cy"
+
 //import './commands.ts'
 //import './index.js'
-
 //const {each}= require ("cypress/types/bluebird");
+
 let username = "standard_user"
 let password = "secret_sauce"
-
-
-/*before(() => {
-    cy.saveLocalStorage()
-})
-
-after(() => {
-
-    cy.login(username,password)
-    //cy.validLogin(email)
- })*/
 
 
 
 
 describe("🚀 Visit Page and Login",() =>{
-    
-    
-    it("Visit Page",()=>{
-        cy.visit("https://www.saucedemo.com/")
-    })
 
-    it("Login [L_001 - Automated]",() => {
-        cy
-        .get("input[id='user-name']")
-        .type(username)
-        .get("input[id='password']")
-        .type(password)
-        .get("input[id='login-button']")
-        .click()
-        .wait(3000)
-    })
+
+it("Visit Page",()=>{
+
+cy.visit("https://www.saucedemo.com/")
+
+})
+
+it("Login [L_001 - Automated]",() => {
+
+    cy
+    .get("input[id='user-name']")
+    .type(username)
+    .get("input[id='password']")
+    .type(password)
+    .get("input[id='login-button']")
+    .click()
+    //.wait(3000)
+
+
+})
 })
 
 
@@ -49,7 +46,7 @@ describe("Products ",() => {
         .contains("Sauce Labs Backpack")
         .get("button[id='add-to-cart-sauce-labs-backpack']")
         .click()
-        .wait(3000)
+       // .wait(3000)
     })
         
     it("Go To Item", () => {
@@ -59,7 +56,7 @@ describe("Products ",() => {
             .contains("Sauce Labs Bike Light")
             .get("button[id='add-to-cart-sauce-labs-bike-light']")
             .click()
-            .wait(3000)
+         //   .wait(3000)
         })
     it("continue shopping",() => {
         cy.scrollTo('top')
@@ -67,7 +64,7 @@ describe("Products ",() => {
         .contains("Sauce Labs Bolt T-Shirt")
         .get("button[id='add-to-cart-sauce-labs-bolt-t-shirt']")
         .click()
-        .wait(3000)
+       // .wait(3000)
 
     })
     
@@ -77,7 +74,7 @@ describe("Products ",() => {
         .contains("Sauce Labs Fleece Jacket")
         .get("button[id='add-to-cart-sauce-labs-fleece-jacket']")
         .click()
-        .wait(3000)
+       // .wait(3000)
     })
 
     it("Junior stuff",()=> {
@@ -95,28 +92,21 @@ describe("Products ",() => {
         .contains("T-Shirt")
         .get("button[id='add-to-cart-test.allthethings()-t-shirt-(red)']")
         .click()
-        .wait(3000)
+      //  .wait(3000)
 
-       /* it("Shopping cart ",()=> {
-            cy
-            
-            //.get("shopping_cart_container")
-            .get("a[class='shopping_cart_link")
-            .scrollIntoView()
-            .click()
-    
-        })*/
        
     })
 })
-     describe("Menu button",()=> {
+
+ 
+describe("Menu button",()=> {
     it("All item",()=> {
        cy
        .scrollTo("top")
        
        .get("button[id='react-burger-menu-btn']")
        .click()
-       .wait(3000)
+      // .wait(3000)
        
     })
       it("about",()=> {
@@ -151,7 +141,7 @@ describe("Products ",() => {
          .scrollTo("top")
          .get("button[id='react-burger-menu-btn']")
          .click()
-         .wait(3000)
+      //   .wait(3000)
          
          .get("a[id='reset_sidebar_link']")
          .get("a[id='logout_sidebar_link']")
@@ -166,15 +156,13 @@ describe("Products ",() => {
             .type(password)
             .get("input[id='login-button']")
             .click()
-            .wait(3000)
+       //     .wait(3000)
             
         })
 
         
 
-   
-      
-    })
+ })
 
     describe("Social Link",()=>{
         it("Twitter",()=>{
@@ -186,7 +174,7 @@ describe("Products ",() => {
             .contains("Twitter")
             .get("li[class='social_twitter']")
             .click()
-            .wait(3000)
+        //    .wait(3000)
 
         })
 
@@ -197,7 +185,7 @@ describe("Products ",() => {
             .contains("Facebook")
             .get("li[class='social_facebook']")
             .click()
-            .wait(3000)
+         //   .wait(3000)
         })
         it("",()=>{
             cy
@@ -206,38 +194,40 @@ describe("Products ",() => {
             .contains("LinkedIn")
             .get("li[class='social_linkedin']")
             .click()
-            .wait(3000)
+        //    .wait(3000)
             
         })
         
+})
 
 
-       
+/*describe ("Option",()=>{    
 
-       
+    it("Select ",()=> {
+    cy
+    .scrollTo('top')
+    .get("div[class='header_secondary_container']")
+    //.get("shopping_cart_container")
+    .get("span[class='select_container'")
+    .get("option[value='az']")
+    //.scrollIntoView()
+    .contains("Name (A to Z)")
 
-        
-
-   
-      
-
-    })
-   
-
-
-
-        
-    
-    
-   
-
-
-
+    .click()
 
     
 
+})
+}) */
+/*before(() => {
+    cy.saveLocalStorage()
+})
 
+after(() => {
 
+    cy.login(username,password)
+    //cy.validLogin(email)
+ })*/
 
 
 /*describe("Product Page item",()=>{
