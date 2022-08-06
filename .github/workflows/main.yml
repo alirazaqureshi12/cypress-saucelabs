@@ -2,7 +2,7 @@ name: Cypress Test
 
 on: [push]
 
-jobs: 
+jobs:
   cypress-run:
     runs-on: macos-latest
     steps:
@@ -11,4 +11,4 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v4.2.0
         with:
-          start: npm run runOnChrome
+          start: npm cypress run runOnChrome
