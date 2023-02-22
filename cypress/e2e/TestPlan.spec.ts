@@ -8,13 +8,15 @@ import { userlogin } from "./Pages/Loginpage"
 
 describe("Login & Booking of Sauce Labs Backpack", () => {
     it('Item 1', () => {
-        cy.visit('https://www.saucedemo.com/')
+        cy.visit(itempage.baseUrl)
 
     
     userlogin.loginUser('standard_user','secret_sauce')
-    itempage.addBackpack()
+    itempage.addItem('Sauce Labs Onesie')
     itempage.clickCart()
-    itempage.fillForm('Ippi','Qureshi','38678')
+    itempage.fillForm('John','Wick','91052')
+    itempage.logout()
+
         
         
     })

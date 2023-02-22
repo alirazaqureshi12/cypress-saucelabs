@@ -3,13 +3,13 @@ import { Cart } from "./Cart"
 class Itempage extends Cart {
 
     landingPageLocators = {
-        sauceLabsBackPack:() => cy.get('.inventory_item_name').contains('Sauce Labs Backpack')
+        sauceLabsBackPack:(item_name: string) => cy.get('.inventory_item_name').contains(item_name)
     }
 
-    addBackpack() {
-        this.landingPageLocators.sauceLabsBackPack().click()
+    addItem(item_name: string) {
+        this.landingPageLocators.sauceLabsBackPack(item_name).click()
         this.clickCart()
-        this.fillForm('Ippi','Qureshi','38678')
+        
         
     }
 

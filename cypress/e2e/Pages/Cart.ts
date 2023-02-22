@@ -1,4 +1,6 @@
-export class Cart {
+import { BasePage } from "./Basepage"
+
+export class Cart extends BasePage {
 
 
     cartLocators = {
