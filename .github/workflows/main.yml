@@ -5,7 +5,7 @@ on: [push]
 jobs:
   install:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node14.21.1-chrome87-ff82
+    container: cypress/base:14.21.1
     steps:
       - name: Checkout
         uses: actions/checkout@v3
