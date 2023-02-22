@@ -11,4 +11,4 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v4.2.0
         with:
-          start: cypress run --browser chrome
+          start: npm run runOnChrome
