@@ -18,6 +18,6 @@ jobs:
           path: build
 
       - name: Cypress install
-        uses: cypress-io/github-action@v5.x.x # use the explicit version number
+        uses: cypress-io/github-action@v5.0.0 # use the explicit version number
         with:
           start: yarn runOnChrome
