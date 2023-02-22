@@ -14,7 +14,7 @@ export default defineConfig({
       
       // implement node event listeners here
     },
-    specPattern: "./cypress/e2e/*{ts,tsx}",
+    specPattern: 'cypress/e2e/*.{js,jsx,ts,tsx}',
     defaultCommandTimeout: 3000,
   experimentalSourceRewriting: false,
   experimentalSessionAndOrigin: false,
