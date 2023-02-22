@@ -25,4 +25,4 @@ jobs:
       - name: Cypress Run
         uses: cypress-io/github-action@v5.0.0 # use the explicit version number
         with:
-          start: yarn runOnChrome
+          start: yarn cypress runOnChrome
