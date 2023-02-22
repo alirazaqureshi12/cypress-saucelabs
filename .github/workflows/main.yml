@@ -1,17 +1,23 @@
-name: Cypress Test
+name: Cypress Tests with installation job
 
 on: [push]
 
 jobs:
-  cypress-run:
-    runs-on: macos-latest
+  install:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.4
-      - name: Cypress.io
-        uses: cypress-io/github-action@v4.2.0
+        uses: actions/checkout@v3
+
+      - name: Save build folder
+        uses: actions/upload-artifact@v3
         with:
-          start: npm run runOnChrome
-  artificats:
-    - path: .
-    - when: always
+          name: build
+          if-no-files-found: error
+          path: build
+
+      - name: Cypress install
+        uses: cypress-io/github-action@v5.x.x # use the explicit version number
+        with:
+          start: yarn runOnChrome
