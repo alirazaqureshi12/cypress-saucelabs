@@ -32,7 +32,7 @@ it("Login [L_001 - Automated]",() => {
     .type(password)
     .get("input[id='login-button']")
     .click()
-    //.wait(3000)
+    console.log('Test')
 
 
 })
